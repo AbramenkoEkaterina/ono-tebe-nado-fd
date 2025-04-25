@@ -3,8 +3,11 @@
   display: grid;
   grid-template-columns: 1.51fr 2fr 1.5fr;
   align-items: center;
-  background-color: antiquewhite;
   padding: 92px 51px 89px;
+  width: 100%;
+  margin: 0 auto;
+}
+.content-section {
   width: 100%;
   margin: 0 auto;
 }
@@ -52,13 +55,19 @@
 .header__address {
   justify-self: end; /*расположили адрес в ячейки грида по правому краю по горизонтали*/
   font-style: inherit;
+  list-style-type: none;
 }
 /* законончили шапку*/
 
 /*начинаем секцию main*/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 183px;
+}
 
 .cover {
-    position: relative; /*элемент перемещается относительно своего начального положения*/
+  position: relative; /*элемент перемещается относительно своего начального положения*/
   padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
@@ -66,10 +75,21 @@
 }
 
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6000000238418579;
+  background-color: #000000;
+}
+/*
+.overlay {
  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
   
-}
+}*/
 
 .cover__title {
   position: relative;
@@ -77,7 +97,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   font-size: 100px;
   line-height: 1.15;
@@ -107,7 +127,8 @@
   letter-spacing: normal; /*убрали отступ у последней буквы слова надо*/
 }
 
-.cover__description { /*область текста с кнопкой*/
+.cover__description {
+  /*область текста с кнопкой*/
   position: relative;
   z-index: 1;
   display: flex;
@@ -118,7 +139,7 @@
 }
 
 .cover__description-text {
-  color: #FFF;
+  color: #fff;
   font-size: 22px;
   line-height: 1.27;
   text-transform: uppercase;
@@ -126,10 +147,10 @@
 }
 
 .bet-button {
-  border: 1px #FFF solid;
+  border: 1px #fff solid;
   padding: 14px 32px;
-  color: #FFF;
-  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-size: 22px;
   line-height: 1;
@@ -140,7 +161,7 @@
 
 .bet-button:hover {
   color: #000000;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .lots {
@@ -203,7 +224,7 @@
 .card__title {
   position: relative;
   z-index: 1;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   font-size: 22px;
   line-height: 1.2;
@@ -214,7 +235,7 @@
 .card__text {
   position: relative;
   z-index: 1;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   line-height: 1.2;
 }
