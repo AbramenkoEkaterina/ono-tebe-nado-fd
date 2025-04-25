@@ -1,7 +1,7 @@
 /* сначала блок header его свойства*/
 .header {
   display: grid;
-  grid-template-columns: 1.51fr 2fr 1.5fr;
+  grid-template-columns: 1fr 148px 1fr;
   align-items: center;
   padding: 92px 51px 89px;
   width: 100%;
@@ -56,6 +56,7 @@
   justify-self: end; /*расположили адрес в ячейки грида по правому краю по горизонтали*/
   font-style: inherit;
   list-style-type: none;
+  padding-right: 38px;
 }
 /* законончили шапку*/
 
@@ -84,12 +85,6 @@ main {
   opacity: 0.6000000238418579;
   background-color: #000000;
 }
-/*
-.overlay {
- background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-  
-}*/
 
 .cover__title {
   position: relative;
@@ -107,24 +102,34 @@ main {
 
 .aligned-text {
   display: block;
+  line-height: 1.15;
 }
 
 .aligned-text_center {
-  line-height: 1;
+ /* line-height: 1;*/
   text-align: center;
+  margin-right: 10px;
 }
 
 .aligned-text_right {
   line-height: 1;
   text-align: right;
+  padding-right: 5px;
+  padding-top: 29px;
+  letter-spacing: normal;
 }
 
 .letter-spacing-extended {
-  letter-spacing: 60px;
+  letter-spacing: 1px;
 }
+
 
 .no-letter-spacing {
   letter-spacing: normal; /*убрали отступ у последней буквы слова надо*/
+}
+
+.letter-spacing-extended-dva {
+  letter-spacing: 18px;
 }
 
 .cover__description {
@@ -132,10 +137,11 @@ main {
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   gap: 78px;
-  padding: 136px 0 0;
+  padding: 115px 0 0;
+  
 }
 
 .cover__description-text {
@@ -143,7 +149,12 @@ main {
   font-size: 22px;
   line-height: 1.27;
   text-transform: uppercase;
-  word-spacing: 18px;
+  word-spacing: 1.1rem;
+  padding-right: 32px
+}
+
+.p_stile {
+  word-spacing: 5 px;
 }
 
 .bet-button {
@@ -169,11 +180,17 @@ main {
 }
 
 .lots__heading {
-  padding: 0 0 30px 40px;
+  /*padding: 0 0 30px 40px;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
+  text-transform: uppercase;*/
+  padding-left: 40px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: 40px;
   text-transform: uppercase;
+  color: #000;
 }
 
 .lots__card-list {
@@ -192,7 +209,7 @@ main {
   height: 100%;
 }
 
-.card {
+.card { /*карточка ее свойства*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -252,7 +269,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 24px;
-  padding: 0 50px;
+  padding: 0 25px;/*50*/
 }
 
 .about__column {
@@ -278,7 +295,7 @@ main {
 }
 
 .about__title {
-  padding: 100px 0 104px;
+  padding: 22px 0 104px;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
@@ -299,7 +316,7 @@ main {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 180px 50px 80px;
+  padding: 178px 50px 80px;
 }
 
 .footer__social-icon {
@@ -326,4 +343,7 @@ main {
   display: flex;
   gap: 48px;
   list-style: none;
+}
+.footer__address {
+  list-style-type: none;
 }

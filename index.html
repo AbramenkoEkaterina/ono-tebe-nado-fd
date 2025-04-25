@@ -11,8 +11,8 @@
   </head>
   <body>
 
-    <header class="header "><!--content-section-->
-      <nav class="header__menu content-section">
+    <header class="header content-section">
+      <nav class="header__menu">
         <ul class="header__links-list">
           <li class="header__links-list-item_no-bullit"> <a class="bez_podcherkivania" href="#">главная</a></li>
           <li class="header__links-list-item"> <a class="podcherkivanie" href="#">посмотреть лоты</a></li>
@@ -48,13 +48,14 @@
       <section class="cover content-section">
         <div class="overlay"></div>   <!--наложили полупрозрачный слой, свойствами будем его расстягивать-->
          <h1 class="cover__title">
-          <span class="aligned-text">о<span class="letter-spacing-extended">но</span></span>
-          <span class="aligned-text aligned-text_center">те<span class="letter-spacing-extended">бе</span>
-          <span class="aligned-text aligned-text_right"><span class="letter-spacing-extended">н</span>ад<span class="no-letter-spacing">о</span></span>
+          <span class="aligned-text">о<span>но</span></span>
+          <span class="aligned-text aligned-text_center">теб<span class="letter-spacing-extended">е</span>
+          <span class="aligned-text aligned-text_right"><span class="letter-spacing-extended-dva">н</span>
+          <span class="letter-spacing-extended-dva">ад</span><span class="no-letter-spacing">о</span></span>
         </h1>
        <!--контейнер с подзаголовком и кнопкой вместе-->
         <div class="cover__description">
-          <p class="cover__descriptio-text">Аукцион вещей, вкоторые никто не верил</p>
+          <p class="cover__description-text">Аукцион вещей, в<span class="p_stile"> которые никто не верил</span></p>
           <button class="bet-button">Сделать ставку</button>
         </div>
       </section >
@@ -127,11 +128,17 @@
     </main>
     <footer class="footer content-section">
       <address class="address">
-        <a class="address__item text-link" href="tel:+99995555555">+9 999 555 5555</a>
-        <a class="address__item text-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <p class="address__address-text">
-          наб. Принсенграхт 263-265,<br />Амстердам
-        </p>
+      <ul class="footer__address">
+        <li>
+          <a class="podcherkivanie" href="tel:+99995555555">+9 999 555 5555</a>
+        </li>
+        <li>
+          <a class="podcherkivanie" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        </li>
+        <li >
+          <p>наб. Принсенграхт 263-265, <br> Амстердам</p>
+        </li>
+      </ul>
       </address>
       <nav class="footer__menu">
         <ul class="footer__menu-list">
