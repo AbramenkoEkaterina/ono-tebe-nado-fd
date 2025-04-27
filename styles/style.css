@@ -3,13 +3,16 @@
   display: grid;
   grid-template-columns: 1fr 148px 1fr;
   align-items: center;
-  padding: 92px 51px 89px;
+  justify-items: end;
+  padding: 89px 50px 96px 50px;
+  font-family: "Raleway", sans-serif; /*шрифт*/
+  font-weight: normal;/*начертание*/
+  font-size: 18px;/*размер*/
   width: 100%;
-  margin: 0 auto;
 }
-.content-section {
-  width: 100%;
-  margin: 0 auto;
+
+.header__menu {
+  margin-right: 36px;
 }
 
 .header__logo {
@@ -17,6 +20,7 @@
   justify-self: center; /*сделали рисунок блочным задали ширину и расположение внутри грида по центру*/
   align-self: center;
   width: 140px;
+  padding-right: 2px;
 }
 
 .header__logo-image {
@@ -39,10 +43,14 @@
   list-style: circle; /* с кружком ссылка*/
 }
 
-.bez_podcherkivania {
+.header__link_active {
   text-decoration: none; /*без подчеркивания ссылка*/
 }
-.podcherkivanie {
+.header__link {
+  text-underline-position: under; /*с подчеркиванием ссылка*/
+}
+
+.address__link {
   text-underline-position: under; /*с подчеркиванием ссылка*/
 }
 
@@ -52,9 +60,8 @@
   font-size: 18px; /*размер текста ссылок в адресе*/
 }
 
-.header__address {
+.header-address {
   justify-self: end; /*расположили адрес в ячейки грида по правому краю по горизонтали*/
-  font-style: inherit;
   list-style-type: none;
   padding-right: 38px;
 }
@@ -64,12 +71,13 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 183px;
+  gap: 180px;
 }
 
 .cover {
   position: relative; /*элемент перемещается относительно своего начального положения*/
   padding: 165px 50px 50px 50px;
+  min-height: 723px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,7 +140,7 @@ main {
   justify-content: space-around;
   align-items: center;
   gap: 78px;
-  padding: 115px 0 0;
+  padding: 110px 0 0;
   
 }
 
@@ -146,13 +154,9 @@ main {
   margin-bottom: 1px;
 }
 
-.p_stile {
-  word-spacing: 5 px;
-}
-
 .bet-button {
   border: 1px #fff solid;
- margin-top: -6px;
+  border-width: 1px;
   padding: 12px 31px 11px 31px;
   color: #fff;
   font-family: "Raleway", sans-serif;
@@ -170,11 +174,12 @@ main {
 }
 
 .lots {
-  padding: 0 50px;
+ margin-right: 24px;
+ margin-left: 24px;
 }
 
 .lots__heading {
-  padding-left: 10px;
+  padding-left: 38px;
   padding-bottom: 23px;
   font-weight: 700;
   font-size: 40px;
@@ -186,6 +191,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 25px;
+  row-gap: 25px;
   list-style: none;
 }
 
@@ -194,6 +200,7 @@ main {
 }
 
 .card-link {
+  text-decoration: none;
   display: block;
   height: 100%;
 }
@@ -208,6 +215,7 @@ main {
   height: 596px;
   padding: 50px 40px;
 }
+
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
@@ -248,8 +256,8 @@ main {
 
 .lots__look-more-link {
   display: block;
-  margin-left: 9px;
-  margin-top: 32px;
+  padding-top: 32px;
+  margin-left: 35px;
   font-size: 20px;
   text-decoration-line: underline;
   text-underline-position: under;
@@ -257,30 +265,30 @@ main {
 }
 
 .about {
+  margin-top: -25px;
   display: grid;
   grid-template-columns: 334px 1fr;
-  column-gap: 24px;
-  padding: 0 25px;
-  margin-top: 55px;
+  justify-content: center;
+  margin-right: 24px;
+  margin-left: 24px;
 }
 
 .about__column {
-  justify-self: center;
-}
-
-.about__column_text {
- grid-column: 2/4;
- 
+  align-content: end;
+  margin-left: 25px;
+  padding-top: 104px;
 }
 
 .about__logo {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
+  justify-content: center;/*выравниваем по центру вдоль основной*/
+  align-items: center;/*выравниваем по центру поперечной*/
+  width: 240px; /*зафиксировали размер*/
   height: 240px;
-  border-radius: 50%;
-  background-color: #000000;
+  border-radius: 50%;/*сделали круглым*/
+  background-color: #000000; /*задали фон*/
+ /* margin-top: 35px;*/
+  margin-left: 47px;
 }
 
 .about__logo-image {
@@ -289,28 +297,33 @@ main {
 }
 
 .about__title {
-  padding: 22px 0 104px;
-  font-weight: bold;
+  margin-bottom: 100px;
+  font-weight: 700;
   font-size: 40px;
-  line-height: 1;
+  line-height: 100%;
   text-transform: uppercase;
 }
 
 .about__text {
-  display: flex;
+ /* display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 25px;*/
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
 }
 
-.about__text p {
-  font-size: 20px;
-  line-height: normal;
+.about_text_all {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /*отступ между первым и вторым параграфом*/
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 178px 50px 80px;
+  padding: 181px 50px 80px;
 }
 
 .footer__social-icon {
