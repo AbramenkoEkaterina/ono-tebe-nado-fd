@@ -260,8 +260,7 @@
   width: fit-content;
 }
 
-/*область об аукционе*/
-.about { 
+.about {
   padding-top: 155px;
   display: grid;
   grid-template-columns: 334px 1fr;
